@@ -1,0 +1,224 @@
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    left: 55px;
+    top: -40px;
+    background: url('https://d8it4huxumps7.cloudfront.net/uploads/profile/6562e84310063.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.company-name {
+    position: absolute;
+    left: 140px;
+    font-weight: 700;
+    font-size: 35px;
+    color: #1E1E1E;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    margin: 0 15px;
+}
+
+.navbar-nav .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 5px 10px;
+}
+
+.btn-primary {
+    padding: 5px 25px;
+}
+
+.navbar .btn-light {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.sign-in-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.bx-grid-vertical {
+    color: black;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000000;
+    margin: 20px 30px 30px;
+}
+
+.breadcrumbs span {
+    color: #000000;
+}
+
+.breadcrumbs .separator {
+    margin: 0 4px;
+    color: #000000;
+}
+
+.breadcrumbs .ipo {
+    color: #0000FF;
+}
+
+/* Categories Section */
+
+.categories {
+    margin: 0 60px;
+}
+
+.categories-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.categories-description {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+/* Boxes for Finance Topics */
+
+.breadcrumbs {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.categories {
+    padding: 0 20px;
+}
+
+.categories-title {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.categories-description {
+    font-weight: 300;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Container for All Finance Boxes */
+.finance-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    grid-gap: 20px; /* Space between boxes */
+    justify-items: center; /* Center items in each column */
+    padding: 20px; /* Padding around the grid */
+    margin: 0 60px 100px;
+}
+
+/* Individual Finance Box Style */
+.finance-box {
+    background-color: #f9f9f9; /* Box background color */
+    border: 1px solid #ccc; /* Box border */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Box takes full width of the grid cell */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Content Inside Each Box */
+.box-content {
+    padding: 20px; /* Padding inside the box */
+}
+
+/* Text Styles Inside Boxes */
+.box-title {
+    font-size: 1.2em; /* Title font size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Title color */
+}
+
+.box-description {
+    font-size: 0.9em; /* Description font size */
+    color: #666; /* Description color */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Container for Modules and Views */
+.modules-views-container {
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between items */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Box Divider Line */
+.box-line {
+    border: 0; /* Remove default border */
+    border-top: 1px solid #000000; /* Top border line */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* View Details Link */
+.view-details-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto; /* Pushes the link to the bottom */
+}
+
+.view-details {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.view-details:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .finance-boxes {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for small screens */
+    }
+}
+
+/* Last Row Adjustment - Center the last two boxes */
+.finance-boxes > :nth-child(10) {
+    grid-column: 2; /* Place the first of the last two boxes in the center */
+}
+
+.finance-boxes > :nth-child(11) {
+    grid-column: 3; /* Place the second of the last two boxes next to the first */
+}
+
+/* Ensure the last row boxes are centered */
+.finance-boxes > :nth-child(n+10) {
+    grid-column: span 1; /* Each last two boxes should span 1 column */
+}
