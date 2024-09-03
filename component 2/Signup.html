@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="Signup.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="signup-container">
+        <img src="images/site_logo.png" alt="Bluestock Logo" class="logo">
+        <h2>Create an account</h2>
+
+        <form id="signupForm" action="/Signup" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Saisha Wagh">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="hello@bluestock.in">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                        <img id="eyeIcon" src="images/eyeiconVisible.png" alt="eye icon">
+                    </span>
+                </div>
+            </div>
+
+            <p>By continuing, you agree to our <a href="#">terms of service</a>.</p>
+
+            
+            <div class="g-recaptcha" data-sitekey="6LeKuigqAAAAAG1_tfzpJG55vtfX6v8sOz8SsCDO"></div>
+            
+
+            <button type="submit" class="signup-btn">Sign up</button>
+
+            <div class="or-divider">
+                <span>or sign up with</span>
+            </div>
+
+            <button type="button" class="google-btn">
+                <img src="images/google.webp" alt="Google Icon"> <!-- Replace with the actual Google icon path -->
+                Continue with Google
+            </button>
+
+            <p class="signin-link">Already have an account? <a href="LoginPage.html">Sign in here</a></p>
+        </form>
+        
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const eyeIcon = document.getElementById("eyeIcon");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.src = "images/eyeinvisible.png"; // Change to the "eye-off" icon
+            } else {
+                passwordField.type = "password";
+                eyeIcon.src = "images/eyeiconVisible.png"; // Change to the "eye" icon
+            }
+        }
+    </script>
+</body>
+</html>
