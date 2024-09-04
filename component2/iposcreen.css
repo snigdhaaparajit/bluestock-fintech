@@ -1,0 +1,456 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 270px;
+    background: #F1F2F7;
+    color: #333;
+    height: 963px;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixed position to keep it on the left */
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-circle {
+    background-color: #6b2cdf;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold; /* Make BF text bold */
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.logo h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+    color: #6b2cdf;
+}
+
+.h{
+    height: 1px;
+    width: 560%;
+    border: 0 none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: lightgrey;
+}
+
+nav{
+    width: 200px;
+    height: 250px;
+    top: 101.33px;
+    left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: #6b2cdf;
+    background: #e6e1ff;
+    padding: 10px;
+    border-radius: 6px;
+    width: 240px;
+}
+
+nav ul li a .icon {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+    filter: brightness(80%);
+}
+
+.menu-title {
+    color: #b0b0b0;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+nav .others{
+    width: 200px;
+    height: 399.24px;
+    left: 30px;
+}
+
+.others {
+    margin-top: 5px; /* Increase space between OTHERS and the first item */
+    
+}
+
+.others .menu-title{
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 1px;
+    margin-left: 300px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-left: 30px;
+}
+
+.search-bar input[type="text"] {
+    width: 650px;
+    padding: 10px 40px 10px 10px; /* Adjust padding for icon */
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    background-color: rgb(236, 237, 238);
+}
+
+.search-bar input[type="text"]::placeholder{
+    color: #a9a7a7;
+    padding-left: 10px;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 1px; /* Position the button close to the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #a9a7a7;
+    padding-left: 90px;
+}
+
+.search-bar button:hover {
+    color: #000;
+}
+
+.arrow-icons, .bell-icons {
+    display: flex;
+    align-items: center;
+}
+
+.fa-bell {
+    font-size: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: rgb(151, 151, 151);
+}
+
+.dropdown-arrow {
+    margin-right: 40px;
+    color: rgb(151, 151, 151);
+}
+
+.header .user-info {
+    color: #333;
+    margin-left: 200px;
+    margin-right: 70px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.dashboard-header h1{
+    padding-left: 45px;
+    margin-top: 3px;
+}
+
+.register-ipo-btn {
+    padding: 10px 20px;
+    background-color: #f6f5fd;
+    color: #5621f5;
+    border: 1px solid #d4ccf8;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+.register-ipo-btn:hover {
+    color: #6b2cdf;
+    background: #e6e1ff;
+}
+
+.ipo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 19px;
+}
+
+.ipo-table th, .ipo-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.ipo-table th {
+    background-color: #f4f4f9;
+}
+
+.ipo-table .o{
+    background-color: rgb(243, 238, 255);
+}
+
+.menu-item:hover .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(235deg) brightness(88%) contrast(99%);
+}
+
+/* Apply darker version of #6b2cdf on click */
+.menu-item:active .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(235deg) brightness(75%) contrast(110%);
+}
+
+.menu-item.active .icon {
+        filter: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(7498%) hue-rotate(232deg) brightness(88%) contrast(97%);
+}
+
+.status {
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.status.ongoing {
+    background-color: #e2fff0;
+    color: #25f251;
+    border: 1px solid #25f251;
+}
+
+.status.coming {
+    background-color: rgb(255, 238, 196);
+    color: goldenrod;
+    border: 1px solid goldenrod;
+}
+
+.status.new-listed {
+    background-color: #ffcbcf;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.update-btn {
+    background-color: #5b15def9;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+}
+
+.delete-btn {
+    color: #f66271;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.view-btn {
+    color: #706f6f;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: transparent;
+} 
+
+.delete-btn:hover, .view-btn:hover{
+    background-color: #fff8f8;
+}
+
+.pagination {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.page-link, .disabled{
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.page-link:hover {
+    color: #6536ff;
+    border: 2px solid #6536ff;
+}
+
+.disabled {
+    color: #7a7a7a;
+}
+
+.disabled:hover {
+    color: #d4d3d3;
+    background-color: darkgrey;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        padding-right: 40px; /* Adjust for button */
+    }
+
+    .arrow-icons, .bell-icons, .user-info {
+        margin: 10px 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .register-ipo-btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .ipo-table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .ipo-table th, .ipo-table td {
+        padding: 10px;
+    }
+
+    .pagination {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .page-link, .disabled {
+        padding: 8px 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .search-bar input[type="text"] {
+        font-size: 14px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .register-ipo-btn {
+        font-size: 14px;
+    }
+
+    .ipo-table th, .ipo-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .status {
+        font-size: 12px;
+    }
+
+    .update-btn {
+        width: 70px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .delete-btn, .view-btn {
+        font-size: 16px;
+    }
+
+    .page-link, .disabled {
+        font-size: 14px;
+    }
+}
