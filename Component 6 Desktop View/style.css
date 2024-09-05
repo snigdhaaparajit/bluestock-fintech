@@ -1,5 +1,6 @@
 .navbar {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
 }
 
 .logo-container {
@@ -10,17 +11,17 @@
 
 .logo {
     width: 80px;
-    height: 70px;
+    height: 50px;
     position: absolute;
-    left: 55px;
-    top: -40px;
+    left: 8px;
+    top: -25px;
     background: url('https://d8it4huxumps7.cloudfront.net/uploads/profile/6562e84310063.jpg') no-repeat center center;
     background-size: cover;
 }
 
 .company-name {
     position: absolute;
-    left: 140px;
+    left: 90px;
     font-weight: 700;
     font-size: 35px;
     color: #1E1E1E;
@@ -32,6 +33,10 @@
 
 .navbar-brand {
   font-weight: bold;
+}
+
+.navbar-nav {
+    margin-left: 250px;
 }
 
 .navbar-nav .nav-link {
@@ -107,7 +112,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
-    color: #000000;
+    color: black;
 }
 
 /* Boxes for Finance Topics */
@@ -132,29 +137,47 @@
     margin: 10px 0;
 }
 
-/* Container for All Finance Boxes */
+/* Boxes for Finance Topics */
 .finance-boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
-    grid-gap: 20px; /* Space between boxes */
+    grid-gap: 25px; /* Space between boxes */
     justify-items: center; /* Center items in each column */
-    padding: 20px; /* Padding around the grid */
-    margin: 0 60px 100px;
+    padding: 80px 20px; /* Padding around the grid */
+    margin: 0 50px 80px;
 }
 
 /* Individual Finance Box Style */
 .finance-box {
     background-color: #f9f9f9; /* Box background color */
     border: 1px solid #ccc; /* Box border */
+    border-image: linear-gradient(to right, #fe2dec, #29effa, #23e3fc, #ff8f33); /* Multicolor border gradient */
+    border-image-slice: 1; /* Slice the gradient to apply it to the border */
     border-radius: 8px; /* Rounded corners */
     width: 100%; /* Box takes full width of the grid cell */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 /* Content Inside Each Box */
 .box-content {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
     padding: 20px; /* Padding inside the box */
+}
+
+/* Image Container */
+.box-image {
+    margin-right: 20px; /* Space between image and text */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+/* Text Container */
+.box-text {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Vertically center the content */
+    align-items: flex-start; /* Align items to the left */
 }
 
 /* Text Styles Inside Boxes */
@@ -173,8 +196,29 @@
 /* Container for Modules and Views */
 .modules-views-container {
     display: flex; /* Flex container */
-    justify-content: space-between; /* Space between items */
+    justify-content: flex-start; /* Align items to the left */
     margin-top: 10px; /* Top margin */
+    width: 100%;
+    gap: 70px;
+}
+
+/* Modules and Views Section */
+.modules, .views {
+    display: flex;
+    align-items: center; /* Vertically center text and icons */
+    gap: 8px; /* Space between icon and text */
+}
+
+/* Icon Styles */
+.modules i, .views i {
+    font-size: medium; /* Icon size */
+    color: #FF7300; /* Icon color */
+}
+
+/* Modules text style */
+.modules span, .views span {
+    font-size: 0.7em; /* Text size */
+    color: #333; /* Text color */
 }
 
 /* Box Divider Line */
@@ -182,30 +226,44 @@
     border: 0; /* Remove default border */
     border-top: 1px solid #000000; /* Top border line */
     margin: 10px 0; /* Margin for spacing */
+    width: 100%;
 }
 
 /* View Details Link */
 .view-details-container {
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
     margin-top: auto; /* Pushes the link to the bottom */
+    text-align: right;
 }
 
 .view-details {
-    font-size: 14px;
-    color: #007bff;
+    font-size: 15px;
+    font-weight: 500;
+    color: #7118ff;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+.view-details span {
+    color: black;
+    font-weight: 500;
 }
 
 .view-details:hover {
     color: #0056b3; /* Darker blue on hover */
 }
 
+/* Hover Effect for the Box */
+.finance-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
     .finance-boxes {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for small screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 columns layout for small screens */
     }
 }
 
@@ -221,4 +279,88 @@
 /* Ensure the last row boxes are centered */
 .finance-boxes > :nth-child(n+10) {
     grid-column: span 1; /* Each last two boxes should span 1 column */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 40px;
+        top: -20px;
+    }
+
+    .company-name {
+        font-size: 28px;
+        left: 75px;
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-nav .btn-primary {
+        padding: 10px 20px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .finance-boxes {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-gap: 15px; /* Less space between boxes */
+        padding: 40px 10px; /* Smaller padding */
+        margin: 0 20px 40px;
+    }
+
+    .categories {
+        margin: 0 30px;
+    }
+
+    .categories-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .categories-description {
+        font-size: 12px;
+    }
+
+    .view-details {
+        font-size: 14px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+        margin: 10px 15px;
+    }
+
+    /* Adjust spacing for breadcrumb separator */
+    .breadcrumbs .separator {
+        margin: 0 2px;
+    }
+
+    /* Center the last two boxes in mobile view */
+    .finance-boxes > :nth-child(n+10) {
+        grid-column: 1; /* Each box will take up the full width */
+    }
+
+    .modules-views-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modules, .views {
+        gap: 5px;
+    }
 }
