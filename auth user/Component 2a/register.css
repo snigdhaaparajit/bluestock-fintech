@@ -1,0 +1,594 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 270px;
+    background: #F1F2F7;
+    color: #333;
+    height: 963px;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixed position to keep it on the left */
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-circle {
+    background-color: #6b2cdf;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold; /* Make BF text bold */
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.logo h2 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+    color: #6b2cdf;
+}
+
+nav{
+    width: 200px;
+    height: 250px;
+    top: 101.33px;
+    left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+    color: #6b2cdf;
+    background: #e6e1ff;
+    padding: 10px;
+    border-radius: 6px;
+    width: 240px;
+}
+
+nav ul li a .icon {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+    margin-left: 30px;
+    filter: brightness(80%);
+}
+
+.menu-title {
+    color: #b0b0b0;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+.it {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: block;
+    align-items: center;
+    gap: 10px;
+}
+
+.item .menu {
+    margin-bottom: 15px; /* Adds spacing between the menu items */
+}
+
+.item a {
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.it ul {
+    list-style: none;
+    padding: 0;
+}
+
+.it ul li {
+    margin-bottom: 20px;
+}
+
+.it ul li.active a,
+.it ul li a:hover {
+    color: #6b2cdf;
+    background: #e6e1ff;
+    padding: 10px;
+    border-radius: 6px;
+    width: 190px;
+    text-decoration: none;
+}
+
+.it ul li a .icon {
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+    margin-left: 30px;
+}
+
+/* Apply #6b2cdf color on hover */
+.menu-item:hover .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(235deg) brightness(88%) contrast(99%);
+}
+
+/* Apply darker version of #6b2cdf on click */
+.menu-item:active .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(235deg) brightness(75%) contrast(110%);
+}
+
+.menu-item.active .icon {
+    filter: brightness(0) saturate(100%) invert(41%) sepia(89%) saturate(7498%) hue-rotate(232deg) brightness(88%) contrast(97%);
+}
+
+/* Apply #6b2cdf color on hover */
+.menu a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(232deg) brightness(88%) contrast(97%);
+}
+
+/* Apply #6b2cdf color on click */
+.menu.active .icon {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(90%) saturate(7498%) hue-rotate(232deg) brightness(75%) contrast(105%);
+}
+
+
+nav .others{
+    width: 200px;
+    height: 399.24px;
+    left: 30px;
+}
+
+.others {
+    margin-top: 5px; /* Increase space between OTHERS and the first item */
+    
+}
+
+.others .menu-title{
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 1px;
+    margin-left: 300px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.search-bar {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-left: 30px;
+}
+
+.search-bar input[type="text"] {
+    width: 650px;
+    padding: 10px 40px 10px 10px; /* Adjust padding for icon */
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    background-color: rgb(236, 237, 238);
+}
+
+.search-bar input[type="text"]::placeholder{
+    color: #a9a7a7;
+    padding-left: 10px;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 1px; /* Position the button close to the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #a9a7a7;
+    padding-left: 90px;
+}
+
+.search-bar button:hover {
+    color: #000;
+}
+
+.arrow-icons, .bell-icons {
+    display: flex;
+    align-items: center;
+}
+
+.fa-bell {
+    font-size: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: rgb(151, 151, 151);
+}
+
+.dropdown-arrow {
+    margin-right: 40px;
+    color: rgb(151, 151, 151);
+}
+
+.header .user-info {
+    color: #333;
+    margin-left: 200px;
+    margin-right: 70px;
+}
+
+.dashboard-header .p .h1{
+    justify-content: space-between;
+}
+
+.dashboard-header p{
+    padding-bottom: 20px;
+}
+
+.dashboard-header h1{
+    padding: 0;
+    margin: 0;
+}
+
+.h {
+    width: 832px;
+    border: none;
+    height: 1px;
+    background-color: lightgrey;
+    margin-right: 30px;
+    
+}
+
+.it .div {
+    border: 1px solid lightgrey;
+    height: 1130px;
+    position: absolute;
+    left: 37%;
+    top: 270px;
+} 
+
+.btn {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.register {
+    position: absolute;
+    top: 125px;
+    background-color: white;
+    color: #4a0ffb;
+    border: 2px solid #4a0ffb;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 840px;
+    margin-bottom: 100px;
+}
+
+.cancel {
+    position: absolute;
+    top: 125px;
+    background-color: white;
+    color: #4a0ffb;
+    border: 2px solid #4a0ffb;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 970px;
+    margin-bottom: 100px;
+}
+
+.btn:hover{
+    background-color: #4a0ffb;
+    color: white;
+}
+
+.content {
+    background-color: #fff;
+    padding: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.container .nav .ul .li .a{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ipo {
+    margin-left: 320px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 320px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: block;
+    margin-inline: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 50px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select {
+    padding: 13px 90px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input, 
+.form-group select {
+    text-align: left; /* Aligns the text to the left */
+}
+
+.logo-upload {
+    display: flex;
+    align-items: center;
+    margin-left: 320px;
+}
+
+.logo-upload .name {
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+
+.logo-upload img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.logo-upload input {
+    display: none;
+}
+
+.bt {
+    margin-left: 40px;
+    top: 50px;
+    position: relative;
+    
+}
+
+.bt .upload{
+    margin-left: 0;
+    background-color: white;
+    color: #4a0ffb;
+    cursor: pointer;
+    border: 2px solid #4a0ffb;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.bt .delete {
+    margin-left: 10px;
+    background-color: white;
+    color: #4a0ffb;
+    cursor: pointer;
+    border: 2px solid #4a0ffb;
+    padding: 10px 32px;
+    border-radius: 8px;
+}
+
+.bt .upload:hover,
+.bt .delete:hover{
+    background-color: #4a0ffb;
+    color: white;
+}
+
+.form-row h4 {
+    margin-left: 20px;
+}
+
+
+/* General mobile styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static; /* Remove fixed position for mobile */
+    }
+
+    .sidebar nav ul li a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: calc(100% - 50px);
+        font-size: 16px;
+    }
+
+    .arrow-icons,
+    .bell-icons {
+        margin-right: 0;
+    }
+
+    .user-info {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content {
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .ipo {
+        margin-left: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-inline: 0;
+    }
+
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .logo-upload {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .logo-upload img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .logo-upload .name {
+        margin-left: 0;
+    }
+
+    .bt {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .it .div {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    .form-row h4 {
+        margin-left: 0;
+    }
+}
+
+/* Further adjustments for very small screens (e.g., 480px or less) */
+@media (max-width: 480px) {
+    .search-bar input[type="text"] {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-group input, 
+    .form-group select {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .logo-upload img {
+        width: 60px;
+        height: 60px;
+    }
+}

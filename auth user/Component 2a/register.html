@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Information</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-circle"><strong>BF</strong></div>
+                <h2>Bluestock Fintech</h2>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li class="menu-title">MENU</li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="Dashboard.html">
+                            <img src="images/dashboard.png" alt="Manage IPO Icon" class="icon">Dashboard
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="register.html">
+                            <img src="images/manage-ipo.png" alt="Manage IPO Icon" class="icon">Manage IPO
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/ipo-subscription.png" alt="IPO Subscription Icon" class="icon">IPO Subscription
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/ipo-allotment.png" alt="IPO Allotment Icon" class="icon">IPO Allotment
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="others">
+                <ul>
+                    <li class="menu-title">OTHERS</li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/settings.png" alt="Settings Icon" class="icon">Settings
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/api-manager.png" alt="API Manager Icon" class="icon">API Manager
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/accounts.png" alt="Accounts Icon" class="icon">Accounts
+                        </a>
+                    </li>
+                    <li class="menu-item" onclick="menuClick(this)">
+                        <a href="#">
+                            <img src="images/help.png" alt="Help Icon" class="icon">Help
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="user-info">
+                    <span>Hi, Vishal</span>
+                </div>
+                <div class="arrow-icons">
+                    <!-- Dropdown Arrow Icon -->
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="bell-icons">
+                    <!-- Notification Bell Icon -->
+                    <i class="fas fa-bell"></i>
+                </div>
+            </header>
+               
+            <div class="content">
+                <div class="dashboard-header">
+                    <p><h1>Upcoming IPO Information </h1><br>
+                        Manage your IPO Details</p>
+                    <button class="btn register" id="registerBtn">Register</button>
+                    <button class="btn cancel" id="cancelBtn">Cancel</button>
+                </div>
+                
+                <div class="it">
+                        <ul class="item">
+                            <li class="menu active" onclick="menuClick(this)">
+                                <a href="#">
+                                    <img src="images/ipo-information.png" alt="Manage IPO Icon" class="icon">IPO Information
+                                </a> 
+                            </li>
+                            <li class="menu" onclick="menuClick(this)">
+                                <a href="#">
+                                    <img src="images/ipo-info.png" alt="Manage IPO Icon" class="icon">IPO Info
+                                </a>
+                            </li>
+                        </ul>
+                    <div class="div"></div>
+                    
+                    <div class="ipo-info">
+                        <div class="ipo">
+                            <p><h2>IPO Information</h2>Enter IPO Details</p>
+                            <hr class="h">
+                            <label for="companyLogo"><h3>Company Logo</h3></label>
+                        </div>
+                        <div class="logo-upload">
+                            <img src="images/nse.png" alt="Company Logo" id="companyLogo">
+                            <input type="file" id="uploadLogo" accept="image/*">
+                            <div class="name"><p><h4>NSE India</h4></p>
+                                <p></p>Tech Lead</p>
+                                <p>Pune</p>
+                            </div>
+                            <div class="bt">
+                                <button class="btn upload">Upload Logo</button>
+                                <button class="btn delete">Delete</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" value="Vodafone Idea">
+                            </div>
+                            <div class="form-group">
+                                <label for="priceBand">Price Band</label>
+                                <input type="text" id="priceBand" placeholder="Not Issued">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="open">Open</label>
+                                <input type="text" id="open" placeholder="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="close">Close</label>
+                                <input type="text" id="close" placeholder="Not Issued">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="issueSize">Issue Size</label>
+                                <input type="text" id="issueSize" value="2300 Cr.">
+                            </div>
+                            <div class="form-group">
+                                <label for="issueType">Issue Type</label>
+                                <select id="issueType">
+                                    <option value="Not Issued">Not Issued</option>
+                                    <option value="Type 1">Type 1</option>
+                                    <option value="Type 2">Type 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="listingDate">Listing Date</label>
+                                <input type="text" id="listingDate" placeholder="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status">
+                                    <option value="Not Issued">Not Issued</option>
+                                    <option value="Issued">Issued</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <h4>New Listed IPO Details (When IPO Gets Listed)</h4>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ipoPrice">IPO Price</label>
+                                <input type="text" id="ipoPrice" value="₹ 383">
+                            </div>
+                            <div class="form-group">
+                                <label for="listingPrice">Listing Price</label>
+                                <input type="text" id="listingPrice" value="₹ 435">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="listingGain">Listing Gain</label>
+                                <input type="text" id="listingGain" value="13.58%">
+                            </div>
+                            <div class="form-group">
+                                <label for="listingDateListed">Listing Date</label>
+                                <input type="text" id="listingDateListed" value="2024-05-30">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cmp">CMP</label>
+                                <input type="text" id="cmp" value="₹ 410">
+                            </div>
+                            <div class="form-group">
+                                <label for="currentReturn">Current Return</label>
+                                <input type="text" id="currentReturn" value="7.05%">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rhp">RHP</label>
+                                <input type="text" id="rhp" placeholder="Enter RHP PDF Link">
+                            </div>
+                            <div class="form-group">
+                                <label for="drhp">DRHP</label>
+                                <input type="text" id="drhp" placeholder="Enter DRHP PDF Link">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+    function menuClick(clickedElement) {
+    // Remove 'active' class from all menu items
+    var menuItems = document.querySelectorAll('.menu');
+    menuItems.forEach(function(item) {
+        item.classList.remove('active');
+    });
+    
+    // Add 'active' class to the clicked menu item
+    clickedElement.classList.add('active');
+}
+
+        // Function to set the active menu item based on the current URL
+    function setActiveMenuItem() {
+        // Get all menu items
+        var menuItems = document.querySelectorAll('.menu-item');
+
+        // Loop through each menu item
+        menuItems.forEach(function(item) {
+            // Get the href attribute from the anchor tag inside the menu item
+            var link = item.querySelector('a').getAttribute('href');
+
+            // If the current page URL matches the link, add the active class
+            if (window.location.pathname.includes(link)) {
+                item.classList.add('active');
+            }
+        });
+    }
+
+    // Call the function to set the active menu item when the page loads
+    document.addEventListener('DOMContentLoaded', setActiveMenuItem);
+        const registerBtn = document.getElementById('registerBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        // Event listener for Register button
+        registerBtn.addEventListener('click', function() {
+            alert('Register Successfull!'); // Replace with your desired functionality
+            // You can redirect, open a modal, or perform any action here
+        });
+            
+            // Event listener for Cancel button
+            cancelBtn.addEventListener('click', function() {
+                alert('Cancel Successfull!'); // Replace with your desired functionality
+                // You can clear a form, close a modal, or perform any action here
+            });
+            document.querySelector('.upload').addEventListener('click', function () {
+                const fileInput = document.getElementById('uploadLogo');
+                fileInput.click();
+            });
+            
+            document.getElementById('uploadLogo').addEventListener('change', function (event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        document.getElementById('companyLogo').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file)
+                }
+            });
+            
+            // Handle the logo delete
+            document.querySelector('.delete').addEventListener('click', function () {
+                document.getElementById('companyLogo').src = "https://via.placeholder.com/100";
+                document.getElementById('uploadLogo').value = ''; // Clear the file input
+            });
+
+    </script>
+</body>
+</html>

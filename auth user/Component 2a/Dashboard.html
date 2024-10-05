@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Fintech Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Effort', 'Amount given'],
+          ['Afternoon',     15],
+          ['Watch TV', 25],
+          ['Sleep',    2]
+        ]);
+
+        var options = {
+          pieHole: 0.7,
+          legend: 'none',
+          pieSliceText: 'none',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-circle"><strong>BF</strong></div>
+            <h2>Bluestock Fintech</h2>
+        </div>
+        <hr class="h">
+
+        <nav>
+            <ul>
+                <li class="menu-title">MENU</li>
+                <li class="menu-item active" onclick="menuClick(this)">
+                    <a href="Dashboard.html">
+                        <img src="images/dashboard.png" alt="Dashboard Icon" class="icon">Dashboard
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="iposcreen.html">
+                        <img src="images/manage-ipo.png" alt="Manage IPO Icon" class="icon">Manage IPO
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/ipo-subscription.png" alt="IPO Subscription Icon" class="icon">IPO Subscription
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/ipo-allotment.png" alt="IPO Allotment Icon" class="icon">IPO Allotment
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="others">
+            <ul>
+                <li class="menu-title">OTHERS</li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/settings.png" alt="Settings Icon" class="icon">Settings
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/api-manager.png" alt="API Manager Icon" class="icon">API Manager
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/accounts.png" alt="Accounts Icon" class="icon">Accounts
+                    </a>
+                </li>
+                <li class="menu-item" onclick="menuClick(this)">
+                    <a href="#">
+                        <img src="images/help.png" alt="Help Icon" class="icon">Help
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       </aside>
+
+        <div class="header-and-dashboard">
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="user-info">
+                    <span>Hi, Vishal</span>
+                </div>
+                <div class="arrow-icons">
+                    <!-- Dropdown Arrow Icon -->
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="bell-icons">
+                    <!-- Notification Bell Icon -->
+                    <i class="fas fa-bell"></i>
+                </div>
+            </header>
+            <div class="dashboard">
+                <div class="ipo-dashboard">
+                    <h1>Dashboard</h1>
+                    <h3>IPO Dashboard India</h3>
+                    <p><span class="gain-text">↑ 20</span> IPO in Gain</p>
+                    <div class="ipo-stats">
+                        <div class="ipo-item ipo-gain">
+                            <span>20</span>
+                            <p>IPO in Gain</p>
+                        </div>
+                        <div class="ipo-item ipo-loss">
+                            <span>9</span>
+                            <p>IPO in Loss</p>
+                        </div>
+                        <div class="ipo-item ipo-total">
+                            <span>30</span>
+                            <p>Total IPO</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <p>Adipiscing elit, sed do eiusmod tempor</p>
+                    <ul>
+                        <li><a href="#"><img src="images/nse.png" alt="NSE India"> NSE India <span>Visit Now</span></a></li>
+                        <hr class="o">
+                        <li><a href="#"><img src="images/bse.jpeg" alt="BSE India"> BSE India <span>Visit Now</span></a></li>
+                        <hr class="o">
+                        <li><a href="#"><img src="images/sebi.jpeg" alt="SEBI"> SEBI <span>Visit Now</span></a></li>
+                        <hr class="o">
+                        <li><a href="#"><img src="images/money.jpeg" alt="Money Control"> Money Control <span>Visit Now</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="main-board">
+                    <h3>Main Board IPO</h3>
+                    <p>From 01 Jan 2024</p>
+                    <div class="btn">
+                        <button class="view">View Report</button>
+                    </div>
+                    <div id="donutchart" style="width: 400px; height: 500px;"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function menuClick(element) {
+            // Remove 'active' class from all menu items
+            var menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked menu item
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
